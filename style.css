@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000013; /* Cor de fundo ajustada */
+    background-image: url('img/Small stars.png'); /* Removida a barra invertida */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: #D6D6F2;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+.containerImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.containerMensagem {
+    padding: 20px;
+    margin-right: 200px; /* Aumenta o espaço entre o texto e as imagens */
+    border-radius: 10px;
+}
+
+section {
+    max-width: 300px;
+}
+
+img {
+    object-fit: cover;
+    max-width: 100px; /* Ajusta o tamanho das imagens */
+    height: auto;
+    margin: 0 10px; /* Espaço entre as imagens */
+}
+
+.gif {
+    max-width: 150px; /* Ajusta o tamanho do GIF */
+    height: auto;
+    object-fit: cover;
+}
+
+button {
+    border-radius: 14px;
+    color: #D6D6F2;
+    background-color: #151557;
+    border: none;
+    height: 33px;
+    padding: 10px 20px;
+    margin-right: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .containerMensagem {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    img {
+        max-width: 80px; /* Ajusta o tamanho das imagens em telas menores */
+    }
+
+    .gif {
+        max-width: 120px; /* Ajusta o tamanho do GIF em telas menores */
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    body{
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 20px;
+    }
+
+    .containerMensagem {
+        order: 2;
+        padding: 15px;
+    }
+
+    .containerImg {
+        flex-direction: column; /* Muda a direção das imagens para coluna */
+        padding: 10px;
+    }
+
+    img {
+        max-width: 70px; /* Ajusta ainda mais o tamanho das imagens */
+        margin: 5px 0; /* Ajusta o espaço entre as imagens */
+    }
+
+    .gif {
+        max-width: 100px; /* Ajusta ainda mais o tamanho do GIF */
+    }
+
+    button {
+        padding: 6px 12px;
+    }
+}
